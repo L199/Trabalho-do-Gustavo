@@ -12,7 +12,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+
 :root {
+
   --blue: #033C73;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -501,6 +503,12 @@ mark,
   max-width: 100%;
   height: auto;
 }
+.btn-danger {
+      color: #fff;
+      background-color: #d9534f;
+      border-color: #d43f3a;
+      margin-left: 10px;
+    }
 
 .figure {
   display: inline-block;
