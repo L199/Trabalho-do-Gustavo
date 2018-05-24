@@ -25,7 +25,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
-
     </style>
 
   </head>
@@ -72,7 +71,7 @@
           <div class="form-group">
             <label class="col-md-4 control-label" for="client-telefone">Telefone<h11>*</h11></label>
             <div class="col-md-4">
-              <input id="client-telefone" name="client-telefone" type="text" size="5" maxlength="10" placeholder="xx xxxx-xxxx" class="form-control input-md">
+              <input id="client-telefone" name="client-telefone" type="number" size="5" maxlength="10" placeholder="xx xxxx-xxxx" class="form-control input-md">
               <span class="help-block">o número do seu telefone</span>
             </div>
           </div>
@@ -83,7 +82,7 @@
           <div class="form-group">
             <label class="col-md-4 control-label" for="client-cep">CEP<h11>*</h11></label>
             <div class="col-md-4">
-              <input id="client-cep" name="client-cep" type="text" size="5" maxlength="8" placeholder="xxxxxxxx" class="form-control input-md">
+              <input id="client-cep" name="client-cep" type="number" size="5" maxlength="8" placeholder="xxxxxxxx" class="form-control input-md">
               <span class="help-block">o endereço de um CEP</span>
             </div>
           </div>
@@ -153,7 +152,7 @@
     </div>
 
 
-    <br> 
+    <br>
 
     <!-- view -->
 
@@ -164,7 +163,6 @@
   </div>
 
   <script type="text/javascript">
-
   </script>
   </body>
 
@@ -173,7 +171,6 @@
   var clients=[];
     var myIndex;
      function addClient(){
-
       var newClient={
         name:document.getElementById("client-name").value,
         nascimento:document.getElementById("client-nascimento").value,
@@ -185,7 +182,6 @@
       clients.push(newClient)
       displayClients()
     }
-
     function displayClients(){
       document.getElementById("form-list-client-body").innerHTML=""
       for (i=0;i<clients.length;i++){
@@ -200,17 +196,14 @@
         editBtn.innerHTML="Edit"
         editBtn.setAttribute("class" , "btn btn-sm btn-primary")
         editBtn.setAttribute("onclick" , "editClient("+i+")")
-
         var deletebtn=document.createElement("button")
         deletebtn.innerHTML="Delete"
         deletebtn.setAttribute("class" , "btn btn-sm btn-danger")
         deletebtn.setAttribute("onclick" , "deleteClient("+i+")")
-
         actionTd.appendChild(editBtn)
         actionTd.appendChild(deletebtn)
         myTr.appendChild(actionTd)
         document.getElementById("form-list-client-body").appendChild(myTr)
-
         }
         document.getElementById("client-name").value="";
         document.getElementById("client-nascimento").value="";
@@ -219,7 +212,6 @@
         document.getElementById("client-cpf").value="";
         document.getElementById("client-email").value=""
     }
-
     //Editing Client
     function editClient(i){
       console.log(clients[i])
@@ -237,7 +229,6 @@
       document.getElementById("client-cpf").value=clients[i].cpf
       document.getElementById("client-email").value=clients[i].email
     }
-
     //Updating Client
     function updClient(){
       var updatedClient={
@@ -254,12 +245,9 @@
       crbtn.setAttribute("onclick","addClient()")
       crbtn.setAttribute("class","btn btn-sm btn-success")
       document.getElementById("saveupdate").innerHTML=""
-
       document.getElementById("saveupdate").appendChild(crbtn);
-
       displayClients()
     }
-
     //deleting client
     function deleteClient(i){
       clients.splice(i,1)
